@@ -1,0 +1,28 @@
+package com.example.ooplab002;
+
+import java.util.Scanner;
+
+public class Prime {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a, clone = 0;
+		System.out.println("Enter the number: ");
+		Scanner obj = new Scanner(System.in);
+		a = obj.nextInt();
+		
+		for(int i=2; i*i<a; i++) {
+			if(a%i==0) {
+				clone = 1;
+				break;
+			}
+		}
+		if(clone==0) {
+			System.out.println("The value is prime");
+		}
+		else
+			System.out.println("The value is not prime");
+		
+	}
+
+}
