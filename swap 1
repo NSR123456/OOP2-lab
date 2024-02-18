@@ -1,0 +1,21 @@
+package com.example.ooplab002;
+
+import java.util.Scanner;
+
+public class swap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a, b, temp;
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter a: ");
+		a = obj.nextInt();
+				System.out.println("Enter b: ");
+	    b = obj.nextInt();
+		temp = a;
+		a=b;
+		b = temp;
+		System.out.println("a = "+a +" , b ="+b);
+	}
+
+}
