@@ -1,0 +1,20 @@
+package com.example.ooplab002;
+
+import java.util.Scanner;
+
+public class Swap2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a, b;
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter a: ");
+		a = obj.nextInt();
+		System.out.println("Enter b: ");
+	    b = obj.nextInt();
+		a = a+b;
+		b = a-b;
+		a = a - b;
+	}
+
+}
