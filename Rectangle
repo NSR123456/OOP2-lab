@@ -1,0 +1,25 @@
+package cW3_89;
+
+public class Rectangle {
+	double width,height,area,perimeter;
+Rectangle(double w,double h){
+	width=w; height=h;
+}
+public void area() {
+	area=width*height;
+	System.out.println("Area: "+area);
+}
+public void perimeter() {
+	perimeter=2*(width+height);
+	System.out.println("Perimeter: "+perimeter);
+}
+	public static void main(String[] args) {
+		
+Rectangle r1=new Rectangle(2,3);
+//Rectangle r2=new Rectangle(10,5);
+r1.area(); 
+r1.perimeter();
+//r2.area(); r2.perimeter();
+	}
+
+}
