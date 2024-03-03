@@ -1,0 +1,15 @@
+package com.example.problem2;
+
+public class Main {
+	public static void main(String args[]) {
+		
+	
+	Dog d1 = new Dog("Sweety", "shepherd");
+	Dog d2 = new Dog("Alison", "Doberman");
+	d1.show();
+	d2.show();
+	d1.setter("Dobby", "Hound");
+	d1.show();
+	d2.show();
+	}
+}
