@@ -1,0 +1,34 @@
+package com.example.april;
+
+public class BankAcc1 {
+	private String name;
+	private String dob;
+	private String accountNumber;
+	private long  balance;
+	
+	public BankAcc1(String name,String dob,String accountNumber) {
+		this.accountNumber = accountNumber;
+		this.name = name;
+		this.dob = dob;
+		
+	}
+	public void deposit(long money) {
+		balance += money;
+	}
+	public void withdraw(long money) {
+		balance -= money;
+	}
+	public long getBalance() {
+		return balance;
+	}
+	public String getName() {
+		return name;
+	}
+	
+	public static void main(String args[]) {
+		BankAcc1 acc = new BankAcc1("Sam", "20/1/1999", "r4566");
+		acc.deposit(45000);
+		System.out.println("Balance of account: \nName: "+acc.getName()+",Balance: "+acc.getBalance()+"\n");
+		
+	}
+}
