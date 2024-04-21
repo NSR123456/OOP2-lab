@@ -1,0 +1,38 @@
+package com.example.april;
+
+public class BankAccount {
+	private String accountNumber;
+	private long  balance;
+	
+	
+	public long getBalance() {
+		return balance;
+	}
+	public void setBalance(long balance) {
+		this.balance = balance;
+	}
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+	
+}
+Main----
+package com.example.april;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BankAccount account = new BankAccount();
+		account.setAccountNumber("ACC-007");
+		account.setBalance(500000);
+		System.out.println("Acdcount Number: " account.getAccountNumber()+"\n"+"Balance: "+account.grtBalance());
+	}
+
+}
+
+
+
