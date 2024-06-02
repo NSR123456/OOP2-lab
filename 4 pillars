@@ -1,0 +1,30 @@
+package com.example.pillarsjava;
+
+public class PillarsJava {
+	protected int money;
+	protected int withdraw;
+	private String name;
+	protected int deposit;
+	public void setdep(int a) { //setter
+		deposit = a;
+	}
+	public void setwithdraw(int a) { //setter
+		withdraw = a;
+	}
+}
+class Withdraw extends PillarsJava{
+	public int money(int b) { //only withdraw;
+		withdraw = b;
+		
+		money = money - withdraw;
+		return money;
+	}
+	
+}
+class Deposit extends Withdraw{
+	public int money(int b) { //Overriding
+	    deposit = b;
+		money = money + deposit; //only deposit
+		return money;
+	}
+}
