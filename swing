@@ -1,0 +1,115 @@
+package com.example.javaswing;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class swingDemo {
+
+	private JFrame frame;
+	private JTextField textName;
+	private JTextField txtini;
+	private JTextField txtWithdraw;
+	private JTextField txtDepo;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					swingDemo window = new swingDemo();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public swingDemo() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblName = new JLabel("Name:");
+		lblName.setBounds(32, 23, 59, 14);
+		frame.getContentPane().add(lblName);
+		
+		textName = new JTextField();
+		textName.setBounds(108, 20, 149, 20);
+		frame.getContentPane().add(textName);
+		textName.setColumns(10);
+		
+		JLabel lblini = new JLabel("Initial Dep. :");
+		lblini.setBounds(32, 58, 59, 14);
+		frame.getContentPane().add(lblini);
+		
+		txtini = new JTextField();
+		txtini.setBounds(108, 55, 149, 20);
+		frame.getContentPane().add(txtini);
+		txtini.setColumns(10);
+		
+		JLabel lblWithdraw = new JLabel("Withdraw :");
+		lblWithdraw.setBounds(32, 87, 59, 14);
+		frame.getContentPane().add(lblWithdraw);
+		
+		txtWithdraw = new JTextField();
+		txtWithdraw.setBounds(133, 87, 149, 14);
+		frame.getContentPane().add(txtWithdraw);
+		txtWithdraw.setColumns(10);
+		
+		JLabel lbldepo = new JLabel("Deposit :");
+		lbldepo.setBounds(32, 110, 59, 14);
+		frame.getContentPane().add(lbldepo);
+		
+		txtDepo = new JTextField();
+		txtDepo.setBounds(108, 107, 121, 17);
+		frame.getContentPane().add(txtDepo);
+		txtDepo.setColumns(10);
+		
+		JLabel lblShow = new JLabel("");
+		lblShow.setBounds(53, 183, 256, 14);
+		frame.getContentPane().add(lblShow);
+		
+		JButton btnShow = new JButton("Show");
+		btnShow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnShow.setBounds(52, 135, 89, 23);
+		frame.getContentPane().add(btnShow);
+		
+		JButton btnReset = new JButton("Reset");
+		btnReset.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			String name = textName.getText();
+				int ini = Integer.parseInt(txtini.getText());
+				int withdraw = Integer.parseInt(txtWithdraw.getText());
+				int deposit = Integer.parseInt(txtDepo.getText());
+				int money = ini - withdraw+ deposit;
+				lblShow.setText( name + " your Current Balance is "+ money);
+		}
+		});
+		btnReset.setBounds(220, 135, 89, 23);
+		frame.getContentPane().add(btnReset);
+	}
+
+}
